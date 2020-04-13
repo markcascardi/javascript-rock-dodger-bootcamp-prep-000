@@ -111,23 +111,14 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
-}
-
-document.addEventListener('keydown', function(e) {
   if (e.which === 37) {
     moveDodgerLeft()
   } else if (e.which === 39) {
      moveDodgerRight()
   }
-})
+}
+
+document.addEventListener('keydown', moveDodger(e))
 
 function moveDodgerLeft() {
   var leftNumbers = dodger.style.left.replace('px', '')
